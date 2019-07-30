@@ -14,6 +14,7 @@ class App extends React.Component {
     return (
       <div className="home-page">
         <div id="fullscreen">
+          <div className="overlay"></div>
           <iframe id="background-video" title="Grenada Drone Flyover" frameBorder="0" allowFullScreen src="https://player.vimeo.com/video/314553822?autoplay&loop&background=1"></iframe>
         </div>
         <div className="main-container">
