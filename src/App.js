@@ -48,7 +48,7 @@ class App extends React.Component {
           <div className="footer-container">
             <div className="footer-row">
               <img src={lineLeft} className="footer-left-line" alt="Line-left"/>
-              <p className="footer-header"> Grenada Mississippi </p>
+              <p className="footer-header"> GRENADA MISSISSIPPI </p>
               <img src={lineRight} className="footer-right-line" alt="Right-line"/>
             </div>
             <p className="footer-par">

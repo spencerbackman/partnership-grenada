@@ -1,10 +1,10 @@
 body {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
   background: #111111;
   perspective: 500px;
 }
@@ -19,23 +19,31 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+  max-height: 100vh;
 }
 
 .overlay {
   width: 100%;
   height: 100%;
   position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   background: url(../images/overlay3.png);
   background-size: 300px 300px;
   background-repeat: repeat;
   opacity: 0.1;
   z-index: 1;
+  max-height: 100vh;
 }
 
 #background-video {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
   height: 100%;
 }
@@ -57,10 +65,11 @@ body {
   }
 }
 .main-container {
-  position: relative;
+  position: absolute;
   top: 0;
   width: 100%;
-  height: auto;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 .home-page {
@@ -184,8 +193,9 @@ body {
 }
 
 .footer-container {
-  width: auto;
-  max-width: 98%;
+  width: 80vw;
+  min-width: 70vw;
+  max-width: 98vw;
   margin: 0 auto;
   display: flex;
   flex-flow: column;
@@ -201,10 +211,8 @@ body {
 
 .footer-row {
   display: flex;
-  flex-flow: row;
-  width: auto;
-  max-width: 80%;
-  margin: 0 auto;
+  flex-flow: row nowrap;
+  width: 100%;
   justify-content: center;
   justify-items: center;
   align-content: center;
@@ -213,20 +221,34 @@ body {
 }
 
 .footer-left-line {
+  min-width: 50px;
   width: 25%;
-  padding: 0 10px 0 0;
+  max-width: 180px;
+  padding: 0;
   margin: 0;
+  margin-right: 10px;
+  height: auto;
+  justify-self: center;
+  align-self: center;
 }
 
 .footer-right-line {
+  min-width: 50px;
   width: 25%;
-  padding: 0 0 0 10px;
+  max-width: 180px;
+  height: auto;
+  padding: 0;
   margin: 0;
+  margin-left: 10px;
+  justify-self: center;
+  align-self: center;
 }
 
 .footer-header {
-  font-size: calc(10px + 2vmin);
+  font-size: 20px;
   font-weight: bold;
+  width: auto;
+  letter-spacing: 0;
   color: #f5f7f6;
   font-family: barteldes-small, serif;
   text-align: center;
@@ -235,7 +257,7 @@ body {
 }
 
 .footer-par {
-  font-size: calc(10px + 2vmin);
+  font-size: 24px;
   color: #f5f7f6;
   font-family: itc-avant-garde-gothic-pro, sans-serif;
   padding: 0;
@@ -245,7 +267,7 @@ body {
 }
 
 .footer-underline {
-  width: 80vw;
+  width: auto;
   height: auto;
   margin: 0 auto;
   padding: 5px 0 0 0;
@@ -270,49 +292,76 @@ body {
   }
 
   .footer-underline {
-    width: 90%;
+    width: 100%;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 910px) {
   .footer-par {
-    font-size: calc(8px + 2vmin);
+    font-size: 22px;
   }
 }
-@media only screen and (max-width: 765px) {
-  .footer-header {
-    font-size: calc(8px + 2vmin);
+@media only screen and (max-width: 870px) {
+  .footer-par {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .footer-par {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 675px) {
+  .footer-par {
+    font-size: 16px;
   }
 }
 @media only screen and (max-width: 645px) {
-  .footer-left-line {
-    width: 20%;
-  }
-
-  .footer-right-line {
-    width: 20%;
-  }
-
-  .footer-par {
-    font-size: calc(6px + 2vmin);
+  .footer-container {
+    width: 98vw;
   }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 560px) {
+  .footer-header {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 515px) {
   .footer-par {
-    font-size: calc(4px + 2vmin);
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 445px) {
+  .footer-par {
+    font-size: 12px;
+  }
+
+  .footer-container {
+    padding-bottom: 100px;
+    padding-top: 0;
+    margin-top: 0;
   }
 }
 @media only screen and (max-width: 435px) {
   .footer-header {
-    font-size: calc(6px + 2vmin);
-  }
-
-  .footer-row {
-    max-width: 90%;
+    font-size: 14px;
   }
 }
-@media only screen and (max-width: 325px) {
+@media only screen and (max-width: 400px) {
+  .footer-header {
+    font-size: 12px;
+  }
+
   .footer-par {
-    font-size: calc(3px + 2vmin);
+    font-size: 10px;
+  }
+
+  .footer-container {
+    padding-bottom: 125px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .footer-header {
+    font-size: 10px;
   }
 }
 @media only screen and (max-width: 686px) {
