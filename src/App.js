@@ -53,7 +53,6 @@ class App extends React.Component {
             </div>
             <p className="footer-par">
               A warm small town atmosphere with a community offering <br/> something for everyone yet always striving for more.
-              
             </p>
             <img src={line} className="footer-underline" alt="Underline"/>
           </div>

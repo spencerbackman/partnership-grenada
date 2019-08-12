@@ -21,22 +21,10 @@ body {
     right: 0;
     bottom: 0;
     max-height: 100vh;
+    max-width: 100vw;
+    min-width: 100vw;
 }
-.overlay {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: url(../images/overlay3.png);
-    background-size: 300px 300px;
-    background-repeat: repeat;
-    opacity: 0.1;
-    z-index: 1;
-    max-height: 100vh;
-}
+
 #background-video {
     position: absolute;
     top: 0;
@@ -67,15 +55,20 @@ body {
     top: 0;
     width: 100%;
     height: 100vh;
-    overflow-y: scroll;
+    width: 100vw;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .home-page {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .main-logo {
@@ -216,7 +209,6 @@ body {
 .footer-left-line {
     min-width: 50px;
     width: 25%;
-    max-width: 180px;
     padding: 0;
     margin: 0;
     margin-right: 10px;
@@ -227,7 +219,6 @@ body {
 .footer-right-line {
     min-width: 50px;
     width: 25%;
-    max-width: 180px;
     height: auto;
     padding: 0;
     margin: 0;
@@ -236,6 +227,7 @@ body {
     align-self: center; 
 }
 .footer-header {
+    width: calc(50% - 20px);
     font-size: 20px; 
     font-weight: bold;
     width: auto;
@@ -258,8 +250,9 @@ body {
 }
 
 .footer-underline {
-    width: auto;
+    width: 100%;
     height: auto;
+    display: block;
     margin: 0 auto;
     padding: 5px 0 0 0;
 }
@@ -280,9 +273,6 @@ body {
         max-width: 98%;
         margin: 0 auto;
         font-size: auto;
-    }
-    .footer-underline {
-        width: 100%;
     }
 }
 
