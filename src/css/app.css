@@ -168,7 +168,7 @@ body {
   min-width: 200px;
   margin: 20px;
   height: auto;
-  display: flex;
+  display: block;
   justify-content: center;
   justify-items: center;
   align-content: center;
@@ -353,7 +353,7 @@ body {
   }
 
   .footer-container {
-    padding-bottom: 125px;
+    padding-bottom: 150px;
   }
 }
 @media only screen and (max-width: 350px) {
@@ -369,9 +369,9 @@ body {
     justify-items: flex-start;
     align-content: center;
     align-items: center;
-    height: 100%;
+    height: auto;
     margin: 0;
-    padding: 0 0 60px 0;
+    padding: 0 0 50px 0;
   }
 
   .Tilt {
@@ -403,7 +403,7 @@ body {
 
   .Tilt {
     width: 200px;
-    height: 200px;
+    height: auto;
   }
   .Tilt .Tilt-inner img {
     width: 200px;
