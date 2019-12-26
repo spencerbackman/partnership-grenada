@@ -4,9 +4,6 @@ import logo from './images/logo.svg';
 import chamberLogo from './images/chamberIcon.png';
 import devLogo from './images/ecoDevIcon.png';
 import tourismLogo from './images/tourismLogo.png';
-import line from './images/line.svg';
-import lineLeft from './images/line-left.svg';
-import lineRight from './images/line-right.svg';
 import './scss/app.scss';
 
 class App extends React.Component {
@@ -21,12 +18,12 @@ class App extends React.Component {
           <div className="header-container">
             <img src={logo} className="main-logo" alt="Greater Grenada Partnership"/>
             <div className="header-row">
-              <img src={lineLeft} className="side-line" alt="left line"/>
+              <div className="left-line" />
               <h2 className="header2"> Welcome to the </h2>
-              <img src={lineRight} className="side-line" alt="right line"/>
-            </div>
+              <div className="right-line" />
+            </div> 
             <h1 className="header"> GREATER GRENADA PARTNERSHIP </h1>
-            <img className="main-underline" src={line} alt="Line"/>
+            <div className="main-underline" />
           </div>
           <div className="tilt-container">
             <Tilt className="Tilt" options={{ max: 25 }}>
@@ -47,14 +44,12 @@ class App extends React.Component {
           </div>
           <div className="footer-container">
             <div className="footer-row">
-              <img src={lineLeft} className="footer-left-line" alt="Line-left"/>
               <p className="footer-header"> GRENADA MISSISSIPPI </p>
-              <img src={lineRight} className="footer-right-line" alt="Right-line"/>
+              <div className="footer-main-line" />
             </div>
             <p className="footer-par">
               A warm small town atmosphere with a community offering <br/> something for everyone yet always striving for more.
             </p>
-            <img src={line} className="footer-underline" alt="Underline"/>
           </div>
         </div>
       </div>
